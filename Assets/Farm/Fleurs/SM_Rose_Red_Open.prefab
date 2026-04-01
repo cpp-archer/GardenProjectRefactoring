@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2639907979102867611}
   - component: {fileID: -8414752238690710323}
   - component: {fileID: -1165204516541300895}
+  - component: {fileID: -276089152777233352}
+  - component: {fileID: 4380155178063266971}
   m_Layer: 0
   m_Name: SM_Rose_Red_Open
   m_TagString: Flower
@@ -155,3 +157,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &-276089152777233352
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4833647557030283328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d469b73deaffca45b548f51321d610a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Flower
+  value: 10
+--- !u!114 &4380155178063266971
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 4833647557030283328}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 010bc3854479da044816baf88a686ef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerVisual

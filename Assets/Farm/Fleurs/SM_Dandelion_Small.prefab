@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: 2710788862918408892}
   - component: {fileID: -759478626638678091}
   - component: {fileID: -7595879557408687003}
+  - component: {fileID: 5516542194432186049}
+  - component: {fileID: -8733853831060239911}
   m_Layer: 0
   m_Name: SM_Dandelion_Small
   m_TagString: Flower
@@ -155,3 +157,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &5516542194432186049
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8457970020362098953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d469b73deaffca45b548f51321d610a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Flower
+  value: 10
+--- !u!114 &-8733853831060239911
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 8457970020362098953}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 010bc3854479da044816baf88a686ef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerVisual

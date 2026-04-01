@@ -14,77 +14,40 @@ public class DiffSeeds : MonoBehaviour
 
     private void Update()
     {
-        //tant que le score est inferieur a 80, on plante que des roses
-        if (Score.score < 80)
+
+        int maxIndex = 0;
+        if (Score.score >= 80) maxIndex = 1;
+        if (Score.score >= 180) maxIndex = 2;
+        if (Score.score >= 280) maxIndex = 3;
+        if (Score.score >= 400) maxIndex = 4;
+
+        if (UserSeed.indexSeed > maxIndex)
         {
-            //si l'utilisateur alt sans avoit debloqué, il plantera la last debloquée
-            if (UserSeed.indexSeed > 0)
-            {
-                UserSeed.indexSeed = 0;
-            }
+            UserSeed.indexSeed = maxIndex;
         }
 
-        //dandelion
-        else if (Score.score < 180)
+        switch (UserSeed.indexSeed)
         {
-            if (UserSeed.indexSeed > 1)
-            {
-                UserSeed.indexSeed = 1;
-            }
-        }
-
-        //hyacinth
-        else if (Score.score < 280)
-        {
-            if (UserSeed.indexSeed > 2)
-            {
-                UserSeed.indexSeed = 2;
-            }
-        }
-
-        //marguerite
-        else if (Score.score < 400)
-        {
-            if (UserSeed.indexSeed > 3)
-            {
-                UserSeed.indexSeed = 3;
-            }
-        }
-
-        //rose noire
-        else if (Score.score > 400)
-        {
-            if (UserSeed.indexSeed > 4)
-            {
-                UserSeed.indexSeed = 4;
-            }
-        }
-
-        //change la seed selon l'index du choix de l'utilisateur dans userseed
-        if (UserSeed.indexSeed == 0)
-            {
+            case 0:
                 currentSeed = roseSeed;
-            }
+                break;
 
-            else if (UserSeed.indexSeed == 1)
-            {
+            case 1:
                 currentSeed = dandelionSeed;
-            }
+                break;
 
-            else if (UserSeed.indexSeed == 2)
-            {
+            case 2:
                 currentSeed = hyacinthSeed;
-            }
+                break;
 
-            else if (UserSeed.indexSeed == 3)
-            {
+            case 3:
                 currentSeed = margueriteSeed;
-            }
+                break;
 
-            else if (UserSeed.indexSeed == 4)
-            {
+            case 4:
                 currentSeed = blackRoseSeed;
-            }
-        }     
-    }
+                break;
 
+        }
+    }
+}

@@ -35,7 +35,10 @@ public class SelectSeedByUser : MonoBehaviour
 
         //deplace et incrémente le curseur de selection dans l'UI
         indexSelect++;
-        if (indexSelect == 1 || indexSelect == 2 | indexSelect == 3 | indexSelect == 4)
+
+        //if (indexSelect == 1 || indexSelect == 2 | indexSelect == 3 | indexSelect == 4)
+
+        if (indexSelect >= 1 && indexSelect <= 4)
         {
             select.transform.position += new Vector3(120f, 0f, 0f); //deplace
         }

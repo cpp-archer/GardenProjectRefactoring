@@ -14,6 +14,8 @@ GameObject:
   - component: {fileID: -294558262399907954}
   - component: {fileID: 1296189188865475514}
   - component: {fileID: -3192609305642374537}
+  - component: {fileID: 6043839088680146349}
+  - component: {fileID: 5393252327910408294}
   m_Layer: 0
   m_Name: SM_Daisy_Single 1
   m_TagString: Flower
@@ -155,3 +157,28 @@ Rigidbody:
   m_Interpolate: 0
   m_Constraints: 0
   m_CollisionDetection: 0
+--- !u!114 &6043839088680146349
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9069948650388196236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5d469b73deaffca45b548f51321d610a, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::Flower
+  value: 10
+--- !u!114 &5393252327910408294
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 9069948650388196236}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 010bc3854479da044816baf88a686ef3, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: Assembly-CSharp::FlowerVisual

@@ -6,13 +6,8 @@ using UnityEngine.SocialPlatforms.Impl;
 public class Harvest : MonoBehaviour
 {
     public InputActionReference recolteActionRef;
-    private GameObject flowerReady;
     public AudioSource harvestSound;
-
-    private Renderer flowerRenderer; //render qu'on va modifier quand on veut recolter une fleur ready
-    private Material originMaterial; //save du material/render de base de la fleur
-
-    public Material green;
+    private Flower currentFlower;
 
     private void OnEnable()
     {
@@ -24,47 +19,32 @@ public class Harvest : MonoBehaviour
     }
     private void OnTriggerEnter(Collider other)
     {
-        //si on collide une fleur ready on la met en memoire pour la recolter elle
-        if (other.CompareTag("Ready"))
+        Flower flower = other.GetComponent<Flower>();
+        if (flower != null)
         {
-            flowerReady = other.gameObject;
-            
-            originMaterial = flowerReady.GetComponent<MeshRenderer>().material; //save
-
-            //on get le meshrender de la fleur pour apres changer son material
-            flowerRenderer = flowerReady.GetComponent<MeshRenderer>();
-
-            if (flowerRenderer != null)
-            {
-                flowerRenderer.material = green;          
-            }
-
-            Debug.Log("fleur ready");
+            currentFlower = flower;
+            other.GetComponent<FlowerVisual>().readyHighlight();
         }
+
     }
 
     //on remet le mesh de base de la fleur quand plus de collision
     private void OnTriggerExit(Collider other)
     {
-        if (other.gameObject == flowerReady)
+        if (other.GetComponent<Flower>() == currentFlower)
         {
-            flowerRenderer.material = originMaterial;
+            other.GetComponent<FlowerVisual>().resetHighlight();
+            currentFlower = null;
         }
     }
 
     private void Recolte(InputAction.CallbackContext context)
     {
-        if (flowerReady != null) //pour pas avoir le message debug a chaque clique de recolte
-        {
-            //score +10 a chaque recolte 
-            Score.score += 10;
-            Debug.Log(Score.score);
 
-            Destroy(flowerReady);
-            Debug.Log("Fleur récoltée");
+        if (currentFlower == null) return;
 
-            harvestSound.Play();
-        }
-    }
+        currentFlower.Harvest();
+        harvestSound.Play(); 
+    }   
 }
 
