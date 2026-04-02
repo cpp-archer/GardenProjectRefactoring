@@ -15,8 +15,8 @@ public class FlowerInteraction : MonoBehaviour
         flowerReady = flower;
         flowerRenderer = flower.GetComponent<Renderer>();
 
-        originMaterial = flower.GetComponent<Material>();
-        green = flower.GetComponent<Material>();
+        originMaterial = flowerRenderer.material;
+        flowerRenderer.material = green;
     }
 
     public void clearFlowerReady()
