@@ -14,6 +14,7 @@ public class SelectSeedByUser : MonoBehaviour
     //par defaut index sur la rose 
     private static int indexSelect=0;
 
+    public DiffSeeds diffSeeds;
     private void Start()
     {
         posInit = select.transform.localPosition; //svg de la pos initiale dans la scene
@@ -33,18 +34,24 @@ public class SelectSeedByUser : MonoBehaviour
     {
         choseSound.Play();
 
-        //deplace et incrémente le curseur de selection dans l'UI
-        indexSelect++;
-        if (indexSelect <= 4)
+        int nextIndex = indexSelect + 1;
+        int maxUnlocked = diffSeeds.getMaxUnlockSeed();
+
+        if(nextIndex > maxUnlocked)
+        {
+            nextIndex = 0;
+
+            select.transform.localPosition = posInit;
+
+        }
+        else
         {
             select.transform.position += new Vector3(120f, 0f, 0f); //deplace
+
         }
 
-        else if (indexSelect == 5) //reset initial
-        {
-            select.transform.localPosition = posInit;
-            indexSelect = 0;
-        }
+        indexSelect = nextIndex;
+
        UserSeed.indexSeed = indexSelect; //POUR SYNCHRO avec le choix du player dans userseed
     }
 

@@ -21,7 +21,7 @@ public class DiffSeeds : MonoBehaviour
 
         currentSeed = seeds[UserSeed.indexSeed];
     }
-    private int getMaxUnlockSeed()
+    public int getMaxUnlockSeed()
     {
         for (int i = unlockScore.Length - 1; i >= 0; i--)
         {
