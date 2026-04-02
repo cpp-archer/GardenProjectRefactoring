@@ -1916,11 +1916,6 @@ MonoBehaviour:
   grassPrefab: {fileID: 6504866077390558305, guid: 2349f53959d83fb4084e3a244830ad77, type: 3}
   width: 10
   height: 10
---- !u!1 &266923027 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 9069948650388196236, guid: 6ee7ff501548bbd48ac085a1c22904aa, type: 3}
-  m_PrefabInstance: {fileID: 1257425233}
-  m_PrefabAsset: {fileID: 0}
 --- !u!4 &272594776 stripped
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 6668074c2f903324cb5f066500bb4b99, type: 3}
@@ -4250,11 +4245,6 @@ MonoBehaviour:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 13fba339ae87d144c8b66c89dbee6bf3, type: 3}
   m_PrefabInstance: {fileID: 36039219}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &498652041 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: a3d02e08cf731b44eb277096d98d5c2d, type: 3}
-  m_PrefabInstance: {fileID: 2021135700}
   m_PrefabAsset: {fileID: 0}
 --- !u!4 &502443572 stripped
 Transform:
@@ -6593,11 +6583,6 @@ PrefabInstance:
     m_AddedGameObjects: []
     m_AddedComponents: []
   m_SourcePrefab: {fileID: 100100000, guid: 6668074c2f903324cb5f066500bb4b99, type: 3}
---- !u!1 &812266551 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 33258481a8f1e714b9a233ce743367f4, type: 3}
-  m_PrefabInstance: {fileID: 968579257}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1 &818866498
 GameObject:
   m_ObjectHideFlags: 0
@@ -7930,13 +7915,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 6c634564b528937488b05b6902ea0e77, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::UserSeed
-  seedUI:
-  - {fileID: 812266551}
-  - {fileID: 1796572743}
-  - {fileID: 1082296401}
-  - {fileID: 266923027}
-  - {fileID: 498652041}
-  unlockScores: 0000000050000000b40000001801000090010000
+  seedUI: []
+  unlockScores: 
 --- !u!1001 &1030665602
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -8354,11 +8334,6 @@ BoxCollider:
   serializedVersion: 3
   m_Size: {x: 1, y: 1, z: 0.5988142}
   m_Center: {x: 3.5844694e-10, y: 0, z: -0.0356993}
---- !u!1 &1082296401 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 489134b2de1e664459f59d89a80b895f, type: 3}
-  m_PrefabInstance: {fileID: 1483217456}
-  m_PrefabAsset: {fileID: 0}
 --- !u!1001 &1094713260
 PrefabInstance:
   m_ObjectHideFlags: 0
@@ -10168,13 +10143,8 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: f35210bc76e87c64c8a908a0a1546a6b, type: 3}
   m_Name: 
   m_EditorClassIdentifier: Assembly-CSharp::DiffSeeds
-  seeds:
-  - {fileID: 5768338110463650993, guid: 51a121acf3c7cc042b8fa8928e6ac737, type: 3}
-  - {fileID: 509709998785424746, guid: 64b79ff939079104c8c1006c205f5566, type: 3}
-  - {fileID: 5768338110463650993, guid: a21735be0a1fa534c9e0ebc06375cc81, type: 3}
-  - {fileID: 5768338110463650993, guid: a1c8ae508523b8b429107ca3a50e646c, type: 3}
-  - {fileID: 5768338110463650993, guid: 4941f36d65048c74f8cfdcc8641db4d8, type: 3}
-  unlockScore: 0000000050000000b40000001801000090010000
+  seeds: []
+  unlockScore: 
   currentSeed: {fileID: 0}
 --- !u!4 &1353968942
 Transform:
@@ -14240,11 +14210,6 @@ PrefabInstance:
 Transform:
   m_CorrespondingSourceObject: {fileID: -8679921383154817045, guid: 7b2164f94d1230549977a09517ad6cd8, type: 3}
   m_PrefabInstance: {fileID: 348690441}
-  m_PrefabAsset: {fileID: 0}
---- !u!1 &1796572743 stripped
-GameObject:
-  m_CorrespondingSourceObject: {fileID: 919132149155446097, guid: 49f1eb77d1eac2b4b951528b0b494a91, type: 3}
-  m_PrefabInstance: {fileID: 140163115}
   m_PrefabAsset: {fileID: 0}
 --- !u!1 &1800209062
 GameObject:
