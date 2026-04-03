@@ -14,7 +14,6 @@ public class DialogueView : MonoBehaviour
 
     private bool isTalking = false;
 
-
     private void Start()
     {  
         //cache les ui au lancement
@@ -24,7 +23,6 @@ public class DialogueView : MonoBehaviour
         fullText = dialogueText.text; //svgr du txt original
         dialogueText.text = ""; //mettre à 0 l'affichage
     }
-
 
     //affiche le pnale "press x "
     public void showPressX()
@@ -42,9 +40,8 @@ public class DialogueView : MonoBehaviour
         pressX.SetActive(false);
     }
 
-
     //lance le dialogue
-    public void StartDialogue()
+     public void StartDialogue()
     {
         if(isTalking) 
             return;
@@ -55,7 +52,6 @@ public class DialogueView : MonoBehaviour
         StopAllCoroutines();
         StartCoroutine(capyText());//lancement des coroutines de texte 
     }
-
 
     //coroutine de texte pour un effet ecriture (lettre par lettre)
     IEnumerator capyText()

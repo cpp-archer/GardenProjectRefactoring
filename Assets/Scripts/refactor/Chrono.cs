@@ -77,11 +77,8 @@ public class Chrono : MonoBehaviour
             yield return new WaitForSeconds(3f);
             continuePanel.SetActive(false);
             timerText.text = "";
-
         }
-
         challengeFinished = true;
     }
-
 }
 
