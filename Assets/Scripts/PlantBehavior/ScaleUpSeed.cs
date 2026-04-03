@@ -17,12 +17,14 @@ public class ScaleUpSeed : MonoBehaviour
         StartCoroutine(GrowSeed());
     }
 
+    
     private void OnTriggerEnter(Collider collision)
     {
+        //si la grinae touche un chunk et qu'elle ne pousse pas deja
         if (collision.gameObject.CompareTag("Chunk") && !isGrowing)
         {
             isGrowing = true;
-            CenterOfChunk(collision);
+            CenterOfChunk(collision); //place la graine au centre
         }
     }
 
@@ -30,7 +32,7 @@ public class ScaleUpSeed : MonoBehaviour
     {
         float timer = 0f;
 
-        //la graine pousse jusqu'a taille 4f
+        //la graine pousse progressivement dans le temps jusqu'a taille 4f
         while (timer < growDuration && transform.localScale.x < maxScale)
         {
             transform.localScale += Vector3.one * growSpeed * Time.deltaTime;
@@ -38,15 +40,19 @@ public class ScaleUpSeed : MonoBehaviour
             yield return null;
         }
 
+        //appel de la fonction quand la croissance est finie
       SpawnFlower();
     }
 
+    //met la graine au centre du chunk selon ses dimensions
     private void CenterOfChunk(Collider chunk)
     {
         Vector3 chunkCenter = chunk.GetComponent<Renderer>().bounds.center;
         transform.position = new Vector3(chunkCenter.x, transform.position.y, chunkCenter.z);
     }
 
+
+    //une fois la graine grandi au max, elle se transforme en fleur
     private void SpawnFlower()
     {
         Instantiate(flowerPrefab, transform.position, Quaternion.identity);

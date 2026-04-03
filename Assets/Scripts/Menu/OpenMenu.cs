@@ -4,7 +4,7 @@ using UnityEngine.UI;
 
 public class OpenMenu : MonoBehaviour
 {
-   
+   //UI
     public GameObject panelMenuLautre;
     public InputActionReference openMenuActionRef;
 
@@ -14,7 +14,7 @@ public class OpenMenu : MonoBehaviour
         panelMenuLautre.SetActive(false);
     }
 
-    public void menuClick() //pour le click souris
+    public void menuClick() //méthode pour le click souris
     {
         panelMenuLautre.SetActive(!panelMenuLautre.activeSelf);
         drop.Play();      
@@ -30,7 +30,7 @@ public class OpenMenu : MonoBehaviour
         openMenuActionRef.action.performed -= openMenu;
     }
 
-    public void openMenu(InputAction.CallbackContext context) //pour btn clavier
+    public void openMenu(InputAction.CallbackContext context) //méthode pour btn clavier
     {
         panelMenuLautre.SetActive(!panelMenuLautre.activeSelf);
         drop.Play();
