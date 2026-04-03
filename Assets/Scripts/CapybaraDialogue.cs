@@ -55,7 +55,7 @@ public class CapybaraDialogue : MonoBehaviour
         {
             inRange = false;
             dialogueTalk.SetActive(false);
-            dialoguePanel.SetActive(false);
+            
 
             StopAllCoroutines();
 

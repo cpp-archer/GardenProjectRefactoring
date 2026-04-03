@@ -10,29 +10,34 @@ public class ScaleUpFlower : MonoBehaviour
     //sons
     public AudioClip readySound;
     public AudioClip explSound;
-
     public ParticleSystem explosion;
+
     void Start()
     {   
         //quand la fleur est instantiée dans la scene on lance la coroutine
-        StartCoroutine(Coroutine_ScaleUp());
+        StartCoroutine(GrowFlower());
     }
-    IEnumerator Coroutine_ScaleUp()
+    IEnumerator GrowFlower()
     {
         while (transform.localScale.x < maxScale)
         {
-            yield return new WaitForEndOfFrame();
             transform.localScale += Vector3.one * growSpeed * Time.deltaTime;
+            yield return null;
         }
 
         gameObject.tag = "Ready"; //prete a etre recolté dans harvest
 
         //son fleur ready
         AudioSource.PlayClipAtPoint(readySound, transform.position);
-       
+
         //ready pendant 7 secondes apres : explosion (destroy) particules et son qui vont avec 
         yield return new WaitForSeconds(7);
-       
+
+        Explode(); 
+    }
+
+    private void Explode()
+    { 
         ParticleSystem exp = Instantiate(explosion, transform.position, Quaternion.identity);
         exp.Play();
         
@@ -40,7 +45,5 @@ public class ScaleUpFlower : MonoBehaviour
         
         Destroy(gameObject);
         Destroy(exp.gameObject, exp.main.duration); 
-
-        Debug.Log("EXPLOSION");
     }
 }

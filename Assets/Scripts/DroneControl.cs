@@ -1,3 +1,4 @@
+using System.Runtime.CompilerServices;
 using UnityEngine;
 using UnityEngine.InputSystem;
 
@@ -22,23 +23,28 @@ public class DroneControl : MonoBehaviour
     }
     void Update()
     {
+        Movements();
+        HandleAudio();
+    } 
+
+    private void Movements()
+    {
         Vector2 stickDirection = moveActionRef.action.ReadValue<Vector2>();
-
-        //g d a r
         Vector3 direction = new Vector3(stickDirection.x, 0, stickDirection.y);
-
         controller.Move(direction * Time.deltaTime * moveSpeed);
+    }
+
+    private void HandleAudio()
+    {
+        Vector2 stick = moveActionRef.action.ReadValue<Vector2>();
+        bool moving = stick!= Vector2.zero;
 
         //si on bouge : son
-        if (!bee.isPlaying && stickDirection != Vector2.zero)
-        {
-            //Debug.Log(stickDirection);
+        if (moving && !bee.isPlaying)
             bee.Play();
-        }
-        
-        else if (stickDirection == Vector2.zero && bee.isPlaying)
-        {
+
+        else if (!moving && bee.isPlaying)
             bee.Stop();
-        }
-    } 
+    }
 }
+
