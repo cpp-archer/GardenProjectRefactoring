@@ -1,6 +1,6 @@
 ﻿using UnityEngine;
 
-public class DiffSeeds : MonoBehaviour
+public class SeedUnlockManager : MonoBehaviour
 {
     //scalabilité 
     public GameObject[] seeds;
@@ -14,12 +14,12 @@ public class DiffSeeds : MonoBehaviour
 
         int maxUnlocked = getMaxUnlockSeed();
 
-        if (UserSeed.indexSeed > maxUnlocked)
+        if (UserSeedUI.indexSeed > maxUnlocked)
         {
-            UserSeed.indexSeed = maxUnlocked;
+            UserSeedUI.indexSeed = maxUnlocked;
         }
 
-        currentSeed = seeds[UserSeed.indexSeed];
+        currentSeed = seeds[UserSeedUI.indexSeed];
     }
     public int getMaxUnlockSeed()
     {

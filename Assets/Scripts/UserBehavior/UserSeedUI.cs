@@ -1,10 +1,7 @@
-
 using UnityEngine;
 
-
-public class UserSeed : MonoBehaviour
+public class UserSeedUI : MonoBehaviour
 {
-
     public GameObject[] seedUI;
     public int[] unlockScores;
     //choix qu'on lira dans diffseed, ui 

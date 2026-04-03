@@ -14,7 +14,7 @@ public class SelectSeedByUser : MonoBehaviour
     //par defaut index sur la rose 
     private static int indexSelect=0;
 
-    public DiffSeeds diffSeeds;
+    public SeedUnlockManager diffSeeds;
     private void Start()
     {
         posInit = select.transform.localPosition; //svg de la pos initiale dans la scene
