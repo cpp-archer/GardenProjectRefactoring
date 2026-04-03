@@ -5,9 +5,9 @@ using UnityEngine.SocialPlatforms.Impl;
 
 public class Harvest : MonoBehaviour
 {
+    //action sinput du joueur
     public InputActionReference recolteActionRef;
     private FlowerInteraction interaction;
-
 
     private void Awake()
     {
@@ -39,6 +39,7 @@ public class Harvest : MonoBehaviour
         }
     }
 
+    //on appelle la fonction de recolte quand on clique sur le bouton pour recolter
     private void Recolte(InputAction.CallbackContext context)
     {
         interaction.HarvestFlower();

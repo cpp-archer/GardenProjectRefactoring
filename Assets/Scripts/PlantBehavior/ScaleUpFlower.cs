@@ -36,6 +36,7 @@ public class ScaleUpFlower : MonoBehaviour
         Explode(); 
     }
 
+    //si la lfeur n'est pas recoltée ) temps, elle explose (en faisant un son et emettant des particules)
     private void Explode()
     { 
         ParticleSystem exp = Instantiate(explosion, transform.position, Quaternion.identity);
