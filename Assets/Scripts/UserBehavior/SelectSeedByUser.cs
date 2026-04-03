@@ -52,7 +52,7 @@ public class SelectSeedByUser : MonoBehaviour
 
         indexSelect = nextIndex;
 
-       UserSeed.indexSeed = indexSelect; //POUR SYNCHRO avec le choix du player dans userseed
+       UserSeedUI.indexSeed = indexSelect; //POUR SYNCHRO avec le choix du player dans userseed
     }
 
 }

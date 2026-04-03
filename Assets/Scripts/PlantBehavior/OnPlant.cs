@@ -3,7 +3,7 @@ using UnityEngine.InputSystem;
 
 public class OnPlant : MonoBehaviour
 {
-    public DiffSeeds seeds;
+    public SeedUnlockManager seeds;
     public InputActionReference plantSeedActionRef;
 
     public AudioSource plantSound;
